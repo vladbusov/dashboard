@@ -1,4 +1,4 @@
-"""dashbord URL Configuration
+"""dashboard URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from dashbord import views
+from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.post_list, name='post_list'),
+    path('main', views.post_list, name='post_list'),
+    path('dashboard', views.post_dash, name='dashboards'),
+    path('d1', views.dashboard, name='d1'),
+    path('dep', views.department, name='dep'),
+    path('selfpage', views.selfpage, name='selfpage')
 ]
