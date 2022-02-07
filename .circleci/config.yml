@@ -15,6 +15,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install
+          command: "pip3 install django"
+      - run:
           name: "Say hello"
           command: "python3 manage.py runserver 0.0.0.0:8000"
 
